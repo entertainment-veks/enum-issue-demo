@@ -2,7 +2,7 @@
 0. Install Go...
 1. Install dependencies
 ```bash
-go install github.com/bufbuild/buf/cmd/buf@v1.11.0
+go install github.com/bufbuild/buf/cmd/buf@latest
 
 go install github.com/grpc-ecosystem/grpc-gateway/v2/protoc-gen-grpc-gateway@latest
 go install github.com/grpc-ecosystem/grpc-gateway/v2/protoc-gen-openapiv2@latest
@@ -17,7 +17,8 @@ buf generate --template api/buf.gen.yaml
 ```
 3. Run application
 ```bash
-go run cmd/main.go
+cd cmd 
+go run .
 ```
 4. Make a grpcurl request to get value that behavies as expected
 ```bash 
