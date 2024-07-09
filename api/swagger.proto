@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+package swagger;
+
+option go_package = "/gen_proto";
+
+import "google/protobuf/descriptor.proto";
+
+import "google/protobuf/empty.proto";
+
+message MyEnum {
+  Value value = 1;
+
+  enum Value {
+    LOST = 0;
+
+    OK = 1;
+  }
+}
+
+service Swagger {
+  rpc GetLost ( google.protobuf.Empty ) returns ( MyEnum ) {
+    
+  }
+
+  rpc GetOk ( google.protobuf.Empty ) returns ( MyEnum ) {
+    
+  }
+}
+
